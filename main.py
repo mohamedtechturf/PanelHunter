@@ -6,6 +6,15 @@ import time
 import sys
 import os
 
+BANNER = r"""
+   ___                 _                    _             
+  / _ \__ _ _ __   ___| | /\  /\_   _ _ __ | |_ ___ _ __  
+ / /_)/ _` | '_ \ / _ \ |/ /_/ / | | | '_ \| __/ _ \ '__| 
+/ ___/ (_| | | | |  __/ / __  /| |_| | | | | ||  __/ |    
+\/    \__,_|_| |_|\___|_\/ /_/  \__,_|_| |_|\__\___|_|    
+                                                          
+"""
+
 class Colors:
     HEADER = '\033[95m'
     BLUE = '\033[94m'
@@ -27,6 +36,10 @@ class Colors:
             kernel32.SetConsoleMode(kernel32.GetStdHandle(-11), 7)
         except:
             pass
+
+def print_styled_banner():
+    """Prints the big ASCII banner in cyan and bold"""
+    print(f"{Colors.BOLD}{Colors.CYAN}{BANNER}{Colors.RESET}")
 
 class AdminPanelFinder:
     def __init__(self, target_url, use_proxy=False, proxy_url=None, max_threads=20):
@@ -188,8 +201,9 @@ def clear_screen():
 
 def show_whats_new():
     clear_screen()
+    print_styled_banner()
     print(f"{Colors.BOLD}{Colors.CYAN}What's New in PanelHunter V2.0{Colors.RESET}")
-    print(f"{Colors.BLUE}{'=' * 50}{Colors.RESET}")
+    print(f"{Colors.BLUE}{'=' * 58}{Colors.RESET}")
     print(f"{Colors.GREEN}✓{Colors.RESET} {Colors.WHITE}Per thread persistent sessions, no connection overhead{Colors.RESET}")
     print(f"{Colors.GREEN}✓{Colors.RESET} {Colors.WHITE}Automatic retries (up to 3 times) on timeouts{Colors.RESET}")
     print(f"{Colors.GREEN}✓{Colors.RESET} {Colors.WHITE}Full colorized output (green = found, red = errors, gray = non-200){Colors.RESET}")
@@ -204,20 +218,21 @@ def show_whats_new():
 
 def show_menu():
     clear_screen()
-    print(f"{Colors.BOLD}{Colors.CYAN}PanelHunter{Colors.RESET}")
+    print_styled_banner()
     print(f"{Colors.BOLD}{Colors.RED}Made with love by MohamedTechTurf{Colors.RESET}")
-    print(f"{Colors.RED}{'=' * 50}{Colors.RESET}")
+    print(f"{Colors.RED}{'=' * 58}{Colors.RESET}")
     print(f"{Colors.GREEN}1.{Colors.RESET} {Colors.WHITE}Scan a website for admin panels{Colors.RESET}")
     print(f"{Colors.GREEN}2.{Colors.RESET} {Colors.WHITE}What's New{Colors.RESET}")
     print(f"{Colors.GREEN}3.{Colors.RESET} {Colors.WHITE}Exit{Colors.RESET}")
-    print(f"{Colors.RED}{'=' * 50}{Colors.RESET}")
+    print(f"{Colors.RED}{'=' * 58}{Colors.RESET}")
     choice = input(f"{Colors.YELLOW}Enter your choice (1-3): {Colors.RESET}").strip()
     return choice
 
 def scan_website():
     clear_screen()
+    print_styled_banner()
     print(f"{Colors.BOLD}{Colors.CYAN}Website Scanning{Colors.RESET}")
-    print(f"{Colors.BLUE}{'=' * 50}{Colors.RESET}")
+    print(f"{Colors.BLUE}{'=' * 58}{Colors.RESET}")
     
     target = input(f"{Colors.YELLOW}Enter target website (e.g., google.com): {Colors.RESET}").strip()
     if not target:
@@ -251,7 +266,7 @@ def scan_website():
     elapsed = time.time() - start
     print(f"\n{Colors.CYAN}Scan completed in {elapsed:.2f} seconds{Colors.RESET}")
 
-    print(f"\n{Colors.MAGENTA}{'=' * 50}{Colors.RESET}")
+    print(f"\n{Colors.MAGENTA}{'=' * 58}{Colors.RESET}")
     print(f"{Colors.CYAN}What would you like to do next?{Colors.RESET}")
     print(f"{Colors.GREEN}1.{Colors.RESET} {Colors.WHITE}Perform another scan{Colors.RESET}")
     print(f"{Colors.GREEN}2.{Colors.RESET} {Colors.WHITE}Return to main menu{Colors.RESET}")
@@ -272,6 +287,7 @@ def main():
             show_whats_new()
         elif choice == "3":
             clear_screen()
+            print_styled_banner()
             print(f"{Colors.GREEN}Thank you for using PanelHunter!{Colors.RESET}")
             print(f"{Colors.CYAN}Exiting...{Colors.RESET}")
             print(f"{Colors.MAGENTA}Made With Love By MTT ❤️{Colors.RESET}")
