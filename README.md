@@ -1,3 +1,6 @@
+<img width="477" height="263" alt="UiOJJ09Apg" src="https://github.com/user-attachments/assets/4ec067b1-512e-4240-9d8c-f7ad7319de1a" />
+
+
 # PanelHunter 🎯
 
 A fast, Python-based tool for security researchers to detect website admin panels, designed with multi-threaded efficiency to map out potential target directories.
