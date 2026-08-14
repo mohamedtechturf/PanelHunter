@@ -170,7 +170,7 @@ class AdminPanelFinder:
                 domain = self.target_url.split('//')[-1].split('/')[0]
                 filename = f"results_{domain}.txt"
                 with open(filename, 'w', encoding='utf-8') as f:
-                    f.write(f"Admin Panel Finder Results for {self.target_url}\n")
+                    f.write(f"PanelHunter Results for {self.target_url}\n")
                     f.write(f"Scan performed on: {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
                     f.write("=" * 50 + "\n\n")
                     for res in self.found_paths:
@@ -190,13 +190,14 @@ def show_whats_new():
     clear_screen()
     print(f"{Colors.BOLD}{Colors.CYAN}What's New in PanelHunter V2.0{Colors.RESET}")
     print(f"{Colors.BLUE}{'=' * 50}{Colors.RESET}")
-    print(f"{Colors.GREEN}✓{Colors.RESET} {Colors.WHITE}Per‑thread persistent sessions – no connection overhead{Colors.RESET}")
-    print(f"{Colors.GREEN}✓{Colors.RESET} {Colors.WHITE}Automatic retries (up to 3 times) on timeouts / errors{Colors.RESET}")
+    print(f"{Colors.GREEN}✓{Colors.RESET} {Colors.WHITE}Per thread persistent sessions, no connection overhead{Colors.RESET}")
+    print(f"{Colors.GREEN}✓{Colors.RESET} {Colors.WHITE}Automatic retries (up to 3 times) on timeouts{Colors.RESET}")
     print(f"{Colors.GREEN}✓{Colors.RESET} {Colors.WHITE}Full colorized output (green = found, red = errors, gray = non-200){Colors.RESET}")
-    print(f"{Colors.GREEN}✓{Colors.RESET} {Colors.WHITE}Fixed integrated proxy (now correctly formatted){Colors.RESET}")
-    print(f"{Colors.GREEN}✓{Colors.RESET} {Colors.WHITE}Thread‑safe result storage with Lock{Colors.RESET}")
+    print(f"{Colors.GREEN}✓{Colors.RESET} {Colors.WHITE}Fixed the integrated proxy{Colors.RESET}")
+    print(f"{Colors.GREEN}✓{Colors.RESET} {Colors.WHITE}Thread safe result storage with Lock{Colors.RESET}")
     print(f"{Colors.GREEN}✓{Colors.RESET} {Colors.WHITE}Duplicate paths removed automatically{Colors.RESET}")
-    print(f"{Colors.GREEN}✓{Colors.RESET} {Colors.WHITE}Ultra‑fast queue processing{Colors.RESET}")
+    print(f"{Colors.GREEN}✓{Colors.RESET} {Colors.WHITE}Ultra fast queue processing{Colors.RESET}")
+    print(f"{Colors.GREEN}✓{Colors.RESET} {Colors.WHITE}2000+ wordlist for deep hunt{Colors.RESET}")
     
     print(f"\n{Colors.YELLOW}Press Enter to return to the main menu...{Colors.RESET}")
     input()
