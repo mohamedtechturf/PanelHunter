@@ -1,5 +1,12 @@
 # PanelHunter 🎯
 
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+![Linux](https://img.shields.io/badge/Supports-Linux-orange.svg)
+![macOS](https://img.shields.io/badge/Supports-macOS-white.svg)
+![windows](https://img.shields.io/badge/Supports-Windows-blue.svg)
+[![github](https://img.shields.io/badge/github-repo-white?logo=github)](https://github.com/mohamedtechturf/Netpreter)
+![Python](https://img.shields.io/badge/python-3.14.7-blue?logo=python)
+
 A fast, Python-based tool for security researchers to detect website admin panels, designed with multi-threaded efficiency to map out potential target directories.
 
 ## Features
