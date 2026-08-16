@@ -9,23 +9,29 @@
 
 A fast, Python-based tool for security researchers to detect website admin panels, designed with multi-threaded efficiency to map out potential target directories.
 
-## Features
+## 🚀 Features
 
 - 🔍 **Multi-threaded scanning:** Optimized for high-speed administration panel identification.
 - ⚙️ **Customizable targets:** Easy configuration using local list files.
 - 📑 **Actionable output:** Localized logging of discovered panels for further inspection.
 
-## Prerequisites
+---
+
+## 📦 Prerequisites
 
 - **Python:** Version 3.x or higher is required.
 - **Terminal:** Access to a command-line interface (e.g., VS Code, terminal).
 
-## Installation & Setup
+---
+
+## 💻 Installation & Setup
 
 1.  **Clone:** `git clone https://github.com/mohamedtechturf/PanelHunter`
 2.  **Navigate:** `cd PanelHunter`
 3.  **Install Deps:** `pip install -r requirements.txt` (or `pip install requests`)
 4.  **Execute:** Run `python main.py` and enter the target URL when prompted.
+
+---
 
 ## 📄 License
 
