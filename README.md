@@ -37,8 +37,6 @@ A fast, Python-based tool for security researchers to detect website admin panel
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
-
 ## 🖼️ Gallery
 
 <img width="477" height="263" alt="UiOJJ09Apg" src="https://github.com/user-attachments/assets/4ec067b1-512e-4240-9d8c-f7ad7319de1a" />
